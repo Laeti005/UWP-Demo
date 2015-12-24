@@ -20,19 +20,39 @@
         <SplitView.Pane>
             <StackPanel>
                 <!-- Menu (hamburger) button -->
-                <RadioButton Style="{StaticResource SplitViewMenuButtonStyle}" Click="OnMenuButtonClicked" />
+                <RadioButton Name="HamburgerMenuButton" Style="{StaticResource SplitViewMenuButtonStyle}" Click="OnMenuButtonClicked" />
 
                 <!-- Home button -->
-                <RadioButton Tag="&#xe10f;" Content="Home" Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnHomeButtonChecked" IsChecked="True" />
+                <RadioButton Name="HomePageMenuButton" Tag="&#xe10f;" Content="Home" Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnHomeButtonChecked" IsChecked="True" />
 
                 <!-- Search button -->
-                <RadioButton Tag="&#xe11a;" Content="Search" Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnSearchButtonChecked" />
+                <RadioButton Name="SearchPageMenuButton" Tag="&#xe11a;" Content="Search" Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnSearchButtonChecked" />
 
+                <!-- Hot restaurant button -->
+                <Grid Tapped="OnHotButtonChecked"
+                              Height="40">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="48"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0"
+                           Height="48"
+                            Margin="10"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Source="Assets/logo.png"></Image>
+                    <TextBlock x:Uid="MenuHotRestaurantText"
+                                Grid.Column="1"
+                                VerticalAlignment="Center"
+                                Text="Hot"
+                                Foreground="White"></TextBlock>
+                </Grid>
+                
                 <!-- Settings button -->
-                <RadioButton Tag="&#xe115;" Content="Settings" Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnSettingsButtonChecked" />
+                <RadioButton Name="SettingsPageMenuButton" Tag="&#xe115;" Content="Settings" Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnSettingsButtonChecked" />
 
                 <!-- About button -->
-                <RadioButton Tag="&#xe783;" Content="About" Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnAboutButtonChecked" />
+                <RadioButton Name="AboutPageMenuButton" Tag="&#xe783;" Content="About" Style="{StaticResource SplitViewNavButtonStyle}" Checked="OnAboutButtonChecked" />
             </StackPanel>
         </SplitView.Pane>
     </SplitView>

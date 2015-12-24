@@ -49,5 +49,17 @@ namespace UWP_Demo
             if (ShellSplitView.Content != null)
                 ((Frame)ShellSplitView.Content).Navigate(typeof(HomePage), "AboutPage");
         }
+
+        private void OnHotButtonChecked(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+            ShellSplitView.IsPaneOpen = false;
+            this.HamburgerMenuButton.IsChecked = true;
+            this.HomePageMenuButton.IsChecked = false;
+            this.SearchPageMenuButton.IsChecked = false;
+            this.SettingsPageMenuButton.IsChecked = false;
+            this.AboutPageMenuButton.IsChecked = false;
+            if (ShellSplitView.Content != null)
+                ((Frame)ShellSplitView.Content).Navigate(typeof(HomePage), "HotPage");
+        }
     }
 }
