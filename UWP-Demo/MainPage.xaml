@@ -37,7 +37,6 @@
                     </Grid.ColumnDefinitions>
                     <Image Grid.Column="0"
                            Height="48"
-                            Margin="10"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
                             Source="Assets/logo.png"></Image>
