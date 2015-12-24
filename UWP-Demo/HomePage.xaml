@@ -9,7 +9,8 @@
 
     <Grid Background="LightGray">
         <Grid Height="48" Background="Lavender" VerticalAlignment="Top">
-            <TextBlock Name="TitleTextBlock" Text="Home Page" FontSize="17" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
+            <Image Source="Assets/logo.png" VerticalAlignment="Center" HorizontalAlignment="Left"></Image>
+            <TextBlock Name="TitleTextBlock" Text="Home Page" FontSize="17" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0"></TextBlock>
         </Grid>
         <TextBlock Text="&#xe10f;" FontFamily="Segoe MDL2 Assets" FontSize="300" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
     </Grid>
